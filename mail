@@ -8,7 +8,7 @@ pipeline {
         }
     }
     post {
-    success {
+    failure {
         mail to: 'nagabushanbe13@gmail.com',
              subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
              body: "Something is wrong with ${pipe2}"
@@ -18,7 +18,7 @@ pipeline {
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
         }
-        failure {
+        success {
             echo 'I failed!'
         }
         unstable {
