@@ -11,7 +11,7 @@ pipeline {
     failure {
         mail to: 'nagabushanbe13@gmail.com',
              subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
-             body: "Something is wrong with ${pipe2}"
+             body: "Something is wrong with ${fact}"
     }
     
         always {
