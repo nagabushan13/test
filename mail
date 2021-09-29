@@ -18,8 +18,8 @@ pipeline {
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
         }
-        success {
-            echo 'I succeeded!'
+        failure {
+            echo 'I failed!'
         }
         unstable {
             echo 'I am unstable :/'
